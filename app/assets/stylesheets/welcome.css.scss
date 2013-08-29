@@ -1,0 +1,306 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$color-rose : #EB5440;
+$color-bleu-gris : #3C4F5F;
+$color-vert : #71AF43;
+$color-grey : #CBC2BD; /* line horizontal menu */
+$color-grey-light : #F3F3F3; /*titre*/
+$width-nav : 789px;
+$width-block-nav : $width-nav/(5.2);
+$height-nav : 115px;
+body
+{
+	background-image : url(BG.jpg);
+	background-size : 100%;
+	margin : auto;
+
+}
+
+#select
+	{
+	position : absolute;
+	margin-top : -85px;
+	margin-right : 5px;
+	img
+		{
+			//width : 154px;
+			margin-right : 5px;
+			//border-radius : 5px;
+
+		}
+	}
+
+#content {
+	width : $width-nav;
+	height : 100%;
+	margin : auto;
+}
+
+nav
+{
+	width : 100%;
+	margin : auto;
+	height : $height-nav;
+	background-color : white;
+	box-shadow : 0px 0px 5px  $color-bleu-gris ;
+	border-radius : 5px;
+
+
+
+	ul
+	{
+		width : 100%;
+		height : $height-nav;
+		margin-left : -40px;
+		li
+		{
+			height : $height-nav;
+			list-style-type : none;
+			display : inline-block;	
+			width : $width-block-nav;
+			border-right : 1px solid $color-grey;
+			text-align : center;
+			a
+			{
+				height : 100%;
+				color : $color-bleu-gris;
+				font-family : "Trebuchet MS";
+				font-size : 18px ;
+				text-decoration : none;
+				&:hover { color : $color-rose;
+						background-color : white; }
+			}
+			#nav_img 
+			{
+				//background-image:url('icon/icon-home.png');
+
+				
+				
+			}
+			
+		}
+	}
+}
+
+
+.home, .couvert, .cocktail, .boxe, .pouce
+		{
+			background-repeat : no-repeat;
+			background-position : center center;
+			background-image:url('icon/icon-home.png');
+			height : 52px;
+			padding-top : 26px;
+		}
+.home:hover
+	{
+		background-image:url('icon/hover-home.png');
+	}
+.couvert
+	{
+		background-image:url('icon/icon-couverts.png');
+
+	} 
+.couvert:hover
+	{
+		background-image:url('icon/hover-couverts.png');
+
+	}
+.cocktail
+	{
+		background-image:url('icon/icon-cocktail.png');
+
+	}
+.cocktail:hover
+	{
+		background-image:url('icon/hover-cocktail.png');
+
+	}
+.boxe
+	{
+		background-image:url('icon/icon-boxe.png');
+
+	}
+.boxe:hover
+	{
+		background-image:url('icon/hover-boxe.png');
+
+	}
+.pouce
+	{
+		background-image:url('icon/icon-pouce.png');
+
+	}	
+.pouce:hover
+	{
+		background-image:url('icon/hover-pouce.png');
+
+	}
+
+li.lastchild
+{
+	border-right : 0px solid $color-grey;	
+}		
+#firstline
+{
+	margin-top : 25px;
+	height : 100%;
+}
+
+
+
+#firstline-blockone.block-boisson,#firstline-blocktwo.block-boisson,#firstline-blockthree.block-boisson,#firstline-finalblock.block-boisson
+{
+	height : 216px;
+	background-color: white;
+	//-webkit-mask-image: url('boire/icon-mojito.png');
+	width : 177px;
+	float : left;
+	margin-left : 27px;
+	border-radius : 6px;
+}	
+#firstline-blockone.block-boisson
+{
+	margin-left : 0px;
+
+}
+
+
+#image-boisson-hover
+	{
+	height : 100px;
+	width : 100%;
+ 	margin-top : -158px;
+		}
+
+#main-content
+{
+	width : 100%;
+	#firstline,#thirdline
+	{
+	height : 216px;
+	width : 100%;
+	//background-color : #C70;
+	}
+}
+img {
+	
+	z-index : -1;
+}
+
+#bottom-block
+	{	
+		font-family: 'Snippet', sans-serif;
+		color : $color-bleu-gris;
+		font-size : 17px;
+
+		#icon-bottom
+		{
+			position : absolute;
+			height : 51px;
+			margin-left : 65px;
+			margin-top : -60px;
+			z-index : +1;
+			width : 50px;
+			background-color : $color-bleu-gris;
+			border-radius : 4px;
+
+			img
+			{
+				 margin-left: 11px;
+    			margin-top: 6px;
+			}
+
+		}
+		#text-bottom
+		{
+			margin-top : 30px;
+			text-align : center;
+		}
+
+	}	
+#secondline
+	{
+		height : 462px;
+		margin-top : 23px;
+		width : 100%;
+	
+		#secondline-bigblock
+			{
+				height : 462px;
+				width : 381px;
+				float : left;
+				border-radius : 6px;
+
+				background-color : white;
+				#image-boisson
+				{
+
+				img
+				{
+				width : 381px;
+				border-top-left-radius: 6px;
+				border-top-right-radius: 6px;
+				}
+				}
+				#icon-bottom
+					{
+					img
+					{
+					width : 36px;
+					}
+					}
+			}
+		#secondline-fourblock
+			{
+				height : 462px;
+				width : 381px;
+				float : left;
+				margin-left : 27px;
+				border-radius : 6px;
+
+
+			}
+	
+
+
+
+	}
+
+//-------------------------------------------- FIGHT --------------------------------------------
+
+#question
+	{
+		margin-top : 25px;
+		width : 100%;
+		text-align : center;
+		word-wrap : break-word;
+		font-family: 'Snippet', sans-serif;
+		color : $color-grey-light;
+		font-size : 34px;
+		font-weight : lighter;
+	}
+
+#first-vs
+	{
+		margin-top : 25px;
+		height : 428px;
+		width : 381px;
+		position : absolute;
+		border-radius : 6px;
+		background-color : white;
+	}
+#second-vs
+	{
+		margin-top : 25px;
+		height : 428px;
+		width : 381px;
+		float : right;
+		border-radius : 6px;
+		background-color : white;
+
+	}
+
+//-------------------------------------------- FIN FIGHT --------------------------------------------
+
