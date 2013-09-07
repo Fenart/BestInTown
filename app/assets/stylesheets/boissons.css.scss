@@ -1,3 +1,43 @@
 // Place all the styles related to the boissons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#secondline
+	{
+		height : 427px;
+		margin-top : 23px;
+		width : 100%;
+#topone
+	{height : 427px;
+	width : 381px;
+	float : left;
+	border-radius : 6px;
+
+	background-color : white;
+		#image-boisson
+		{
+
+		img
+			{
+			width : 381px;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+			}
+		}
+		#icon-bottom
+		{
+			img
+			{
+				width : 36px;
+			}
+		}
+	}
+	#toptwo
+	{
+	height : 200px;
+	width : 381px;
+	float : right;
+
+	}
+	}
+

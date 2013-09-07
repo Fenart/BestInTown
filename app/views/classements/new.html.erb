@@ -1,0 +1,33 @@
+<h1>New Classement</h1>
+<%= debug @boisson %>
+<%# <%= link_to 'New Boisson', new_boissons_path %>
+<% @classementall.each do |a| %>
+	<%= a.boisson_id %>
+<% end %>
+<%= @boisson.name %>
+
+
+
+<%= form_for @classement do |f| %>
+  <% if @classement.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@classement.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+    <ul>
+    <% @classement.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :boisson_id %><br>
+    <%= f.text_field :boisson_id %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+

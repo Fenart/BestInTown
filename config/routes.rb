@@ -1,8 +1,25 @@
 BestinTown::Application.routes.draw do
+  get "classements/index"
+  get "classement/index"
+  get "plats/index"
   get "welcome/index"
 
-  resources :etablissements
-  resources :boissons
+  resources :etablissements #do
+  #  resources :classement
+  #end
+
+  resources :classements do
+    resources :boissons
+  end
+  
+
+  resources :boissons #do
+    #resources :classement
+  #end
+
+  resources :plats
+  resources :classement
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

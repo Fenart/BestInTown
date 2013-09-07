@@ -1,0 +1,33 @@
+<h1>New Plat</h1>
+<%# <%= link_to 'New Boisson', new_boissons_path %>
+<% @platall.each do |a| %>
+	<%= a.name %>
+<% end %>
+
+<%= form_for @plat do |f| %>
+  <% if @plat.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@plat.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+    <ul>
+    <% @plat.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+

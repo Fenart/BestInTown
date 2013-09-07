@@ -2,6 +2,7 @@ class BoissonsController < ApplicationController
 
 	def index
 		@boisson = Boisson.all
+		@classement = Classement.all
 	end
 
 	def new
@@ -21,6 +22,10 @@ class BoissonsController < ApplicationController
 
 	def show
 		@boisson = Boisson.find(params[:id])
+		#Client.find_by! first_name: 'Lifo'
+		#where(name: 'David', occupation: 'Code Artist')
+		@top_one_boisson = Classement.where(boisson_id: 1)#.maximum("point")
+		#@top_one_boisson = Classement.all
 	end
 
 	private

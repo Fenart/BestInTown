@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  point: 1
+  etablissement_id: 
+  plat_id: 
+  boisson_id: 
+
+two:
+  point: 1
+  etablissement_id: 
+  plat_id: 
+  boisson_id: 
