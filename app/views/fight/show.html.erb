@@ -1,0 +1,67 @@
+  <% content_for :boisson do %>
+     <%= stylesheet_link_tag  "fight", media: "all", "data-turbolinks-track" => true %>
+
+  <% end %>
+<div id="content">  
+
+  <div id="question">
+    <h1> Qui fait le meilleur <%= @item[0].name %> ?</h1>
+  </div>
+  <div id="big_two_small">
+
+  <% if @etablissement[1].present? %>
+      <% @etablissement.each.with_index do |e,index| %>
+     
+   <% if index == 1 %>
+      <% @class = "last_child" %>
+   <% end %>
+ 
+      <div id="first-vs" class="<%= @class %>"> 
+      <div id='image-boisson'>
+            
+            <img alt="<%= e.name %>" src="/assets/bar/<%= e.path %>" />
+            <div id='icon-bottom'>
+           <!-- <a href="">
+              <img alt="Icon-etoile" src="/assets/coeur.png" />
+              </a>-->
+              <%= link_to image_tag('coeur.png'), {:controller => "classements", :action => "edit", :id_etablissement => e.id , :id_item => @item[0].id } %>
+
+            </div>
+          </div>
+          <div id='bottom-block'>
+            <div id="title-etab">
+                <%= e.name %>
+            </div>
+            <div id="location">
+                 <img alt="locatationpoint" src="/assets/pointer.png" >
+                  <span><%= e.adresse %></span>
+            </div>
+                        <div id="vote">
+                <p><%= e.description %></p>
+            </div>
+
+              
+          </div>
+        </div>
+      
+ <% end %>
+</div>
+  </div>
+
+
+      <% if @current = '1' %>
+       <div id='button_s' class="start_passer">
+        <%= link_to 'Passer', fight_path(2) %>
+        </div>
+      <% else %>
+       <div id='button_s' class="start_passer">
+        <%= link_to 'Passer', fight_path(1) %>
+        </div>
+      <% end %>
+   <% else %>
+      Pas encore d'établissement
+      En proposer un :
+   <% end %>
+
+</div>
+

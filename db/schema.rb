@@ -11,18 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130830094945) do
+ActiveRecord::Schema.define(version: 20130907100926) do
 
   create_table "boissons", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "path",          limit: nil
+    t.string   "path",          limit: 45
     t.integer  "classement_id"
   end
-
-  add_index "boissons", ["classement_id"], name: "index_boissons_on_classement_id"
 
   create_table "classements", force: true do |t|
     t.integer  "point"
@@ -36,6 +34,14 @@ ActiveRecord::Schema.define(version: 20130830094945) do
   add_index "classements", ["boisson_id"], name: "index_classements_on_boisson_id"
   add_index "classements", ["etablissement_id"], name: "index_classements_on_etablissement_id"
   add_index "classements", ["plat_id"], name: "index_classements_on_plat_id"
+
+  create_table "etablissements", force: true do |t|
+    t.string   "name"
+    t.string   "adresse"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "path",       limit: nil
+  end
 
   create_table "plats", force: true do |t|
     t.string   "name"

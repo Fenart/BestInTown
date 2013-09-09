@@ -1,85 +1,57 @@
-<!--<h1><%= @boisson.name %></h1>
-<%= debug @top_one_boisson %>
-<p><%= @boisson.description %></p>-->
-  <%= stylesheet_link_tag    "boissons", media: "all", "data-turbolinks-track" => true %>
-
-<link href='http://fonts.googleapis.com/css?family=Snippet' rel='stylesheet' type='text/css'>
-<div id='content'>
-  <nav>
-    <ul>
-      <li class='child'>
-        <a href='#'>
-          <div class='home' id='nav_img'>
-            <!-- /= image_tag("icon/icon-home.png") -->
-          </div>
-          <a href="http://localhost:3000/">Accueil</a>
-        </a>
-      </li>
-      <li class='child'>
-        <a href='#'>
-          <div class='boxe' id='nav_img'>
-            <!-- /= image_tag("icon/icon-boxe.png") -->
-          </div>
-          <!-- /Fight -->
-          <a href="fight/index">Fight</a>
-        </a>
-      </li>
-      <li class='child'>
-        <a href='#'>
-          <div class='couvert' id='nav_img'>
-            <!-- /= image_tag("icon/icon-couverts.png") -->
-          </div>
-          A manger
-        </a>
-      </li>
-      <li class='child'>
-        <a href='#'>
-          <div class='cocktail' id='nav_img'>
-            <!-- /= image_tag("icon/icon-cocktail.png") -->
-          </div>
-          <a href="boire/index">A boire</a>
-        </a>
-      </li>
-      <li class='lastchild'>
-        <a href='#'>
-          <div class='pouce' id='nav_img'>
-            <!-- /= image_tag("icon/icon-pouce.png") -->
-          </div>
-          Soumettre
-        </a>
-      </li>
-    </ul>
-  </nav>
+<%= stylesheet_link_tag    "boissons", media: "all", "data-turbolinks-track" => true %>
 
   <div id='main-content'>
-    <div id='secondline'>
-      <div id='topone'>
-        <div id='image-boisson'>
-          <img alt="Sunset" src="/assets/boire/sunset.png" />
-          <div id='bottom-block'>
+  	<h1>Où boire des <%= @boisson.name %>s ?</h1>
+    <div id='big_two_small'>
+		<% @top_one_boisson.each.with_index do |z,index| %>
+			<% if index == 0 %>
+				<div id='topone'>
+        	<div id='image-boisson'>
+            
+        		<img alt="Sunset" src="/assets/boire/sunset.png" />
             <div id='icon-bottom'>
-              <img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
-            </div>
-            <div id='text-bottom'>
-             <%= @top_one_boisson %>
+              <!--<img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />-->
+              # 1
             </div>
           </div>
-        </div>
-      </div>
+        	<div id='bottom-block'>
+         		<div id="title-etab">
+                <%= z.name %>
+            </div>
+         		<div id="location">
+                 <img alt="locatationpoint" src="/assets/pointer.png" >
+                  <span><%= z.adresse %></span>
+            </div>
 
-      <div id='toptwo'>
-        <div id='image-boisson'>
-          <img alt="Sunset" src="/assets/boire/sunset.png" />
-          <div id='bottom-block'>
-            <div id='icon-bottom'>
-              <img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
+            <div id="vote">
+                <p><span><%= z.point %></span> votes</p>
             </div>
-            <div id='text-bottom'>
-              La sangria sunset
-            </div>
+             
+        			
           </div>
         </div>
-      </div>
+      <% else %>
+        <div id='image-boisson'>
+    			<img alt="<%= z.path %>" src="/assets/bar/<%= z.path %>" />
+     			<div id='bottom-block'>
+       			<div id='icon-bottom'>
+          		<img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
+          	</div>
+           	<div id='text-bottom'>
+             	<%= z.name %>
+            	<%= z.adresse %>
+      	 			<%= z.point %>
+     				</div>
+    			</div>
+      	</div>
+          	<% end %>
+
+				
+			
+		<% end %>
+      <!--
+      <div id='toptwo'>
+
        <div id='toptwo'>
         <div id='image-boisson'>
           <img alt="Sunset" src="/assets/boire/sunset.png" />
@@ -93,7 +65,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     
   </div>
 </div>

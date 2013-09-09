@@ -10,27 +10,34 @@ $color-grey-light : #F3F3F3; /*titre*/
 $width-nav : 789px;
 $width-block-nav : $width-nav/(5.2);
 $height-nav : 115px;
+
+a 
+{
+	
+	text-decoration : none;
+	color : $color-bleu-gris;
+}
+
+h1{
+	
+			margin-top : 25px;
+		width : 100%;
+		text-align : center;
+		word-wrap : break-word;
+		font-family: 'Snippet', sans-serif;
+		color : $color-grey-light;
+		font-size : 34px;
+		font-weight : lighter;
+}
+
 body
 {
 	background-image : url(BG.jpg);
 	background-size : 100%;
 	margin : auto;
-
+	font-family : 'Snippet', sans-serif;
 }
 
-#select
-	{
-	position : absolute;
-	margin-top : -85px;
-	margin-right : 5px;
-	img
-		{
-			//width : 154px;
-			margin-right : 5px;
-			//border-radius : 5px;
-
-		}
-	}
 
 #content {
 	width : $width-nav;
@@ -46,9 +53,7 @@ nav
 	background-color : white;
 	box-shadow : 0px 0px 5px  $color-bleu-gris ;
 	border-radius : 5px;
-
-
-
+	margin-bottom : 30px;
 	ul
 	{
 		width : 100%;
@@ -141,166 +146,108 @@ nav
 li.lastchild
 {
 	border-right : 0px solid $color-grey;	
-}		
+}	
+
+#big_two_small
+{
+	height : 462px;
+	margin-top : 23px;
+	width : 100%;
+	
+	#block
+	{		
+		width : 377px;
+		float : left;
+		border-radius : 6px;
+		background-color : white;
+				
+		#image-boisson
+		{	
+			.small_im
+			{
+				height : 180px;
+			}
+					
+			.big_im
+			{
+				height : 350px;
+			}
+					
+			img
+			{
+				width : 100%;
+				height : 100%;
+				border-top-left-radius: 6px;
+				border-top-right-radius: 6px;
+					
+			}
+		}
+		#bottom-block
+		{
+			#icon-bottom
+			{
+				img
+				{
+					width : 36px;
+					background-color :#F05246;
+					padding : 10px;
+					border-radius :5px;
+					margin-top : -35px;
+					margin-left : 163px;
+				}
+			}
+			#text-bottom
+			{
+				text-align : center;
+				margin-top  :23px;
+
+			}
+		}
+		.big_bottom
+		{
+
+		}
+
+		.small_bottom
+		{
+			padding-top : 0px;
+			padding-left : 20px;
+
+		}
+	}
+
+	.small
+	{
+		height : 220px;
+		margin-left : 35px;
+		margin-bottom : 22px;
+	}
+
+	.big
+	{
+		height : 462px;
+	}
+}
+
 #firstline
 {
 	margin-top : 25px;
 	height : 100%;
-}
 
-
-
-#firstline-blockone.block-boisson,#firstline-blocktwo.block-boisson,#firstline-blockthree.block-boisson,#firstline-finalblock.block-boisson
-{
-	height : 216px;
-	background-color: white;
-	//-webkit-mask-image: url('boire/icon-mojito.png');
-	width : 177px;
-	float : left;
-	margin-left : 27px;
-	border-radius : 6px;
-}	
-#firstline-blockone.block-boisson
-{
-	margin-left : 0px;
-
-}
-
-
-#image-boisson-hover
+	.block-boisson
 	{
-	height : 100px;
-	width : 100%;
- 	margin-top : -158px;
-		}
-
-#main-content
-{
-	width : 100%;
-	#firstline,#thirdline
-	{
-	height : 216px;
-	width : 100%;
-	//background-color : #C70;
-	}
-}
-img {
-	
-	z-index : -1;
-}
-
-#bottom-block
-	{	
-		font-family: 'Snippet', sans-serif;
-		color : $color-bleu-gris;
-		font-size : 17px;
-
-		#icon-bottom
-		{
-			position : absolute;
-			height : 51px;
-			margin-left : 65px;
-			margin-top : -60px;
-			z-index : +1;
-			width : 50px;
-			background-color : $color-bleu-gris;
-			border-radius : 4px;
-
-			img
-			{
-				 margin-left: 11px;
-    			margin-top: 6px;
-			}
-
-		}
-		#text-bottom
-		{
-			margin-top : 30px;
-			text-align : center;
-		}
-
-	}	
-#secondline
-	{
-		height : 462px;
-		margin-top : 23px;
-		width : 100%;
-	
-		#secondline-bigblock
-			{
-				height : 462px;
-				width : 381px;
-				float : left;
-				border-radius : 6px;
-
-				background-color : white;
-				#image-boisson
-				{
-
-				img
-				{
-				width : 381px;
-				border-top-left-radius: 6px;
-				border-top-right-radius: 6px;
-				}
-				}
-				#icon-bottom
-					{
-					img
-					{
-					width : 36px;
-					}
-					}
-			}
-		#secondline-fourblock
-			{
-				height : 462px;
-				width : 381px;
-				float : left;
-				margin-left : 27px;
-				border-radius : 6px;
-
-
-			}
-	
-
-
-
-	}
-
-//-------------------------------------------- FIGHT --------------------------------------------
-
-#question
-	{
-		margin-top : 25px;
-		width : 100%;
-		text-align : center;
-		word-wrap : break-word;
-		font-family: 'Snippet', sans-serif;
-		color : $color-grey-light;
-		font-size : 34px;
-		font-weight : lighter;
-	}
-
-#first-vs
-	{
-		margin-top : 25px;
-		height : 428px;
-		width : 381px;
-		position : absolute;
+		height : 216px;
+		background-color: white;
+		//-webkit-mask-image: url('boire/icon-mojito.png');
+		width : 177px;
+		float : left;
+		margin-left : 27px;
+		margin-bottom : 30px;
 		border-radius : 6px;
-		background-color : white;
 	}
-#second-vs
+	#first_boisson
 	{
-		margin-top : 25px;
-		height : 428px;
-		width : 381px;
-		float : right;
-		border-radius : 6px;
-		background-color : white;
-
+		margin-left : 0px;
 	}
-
-//-------------------------------------------- FIN FIGHT --------------------------------------------
-
+	
+}

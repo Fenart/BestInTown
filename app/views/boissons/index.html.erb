@@ -1,59 +1,12 @@
-<link href='http://fonts.googleapis.com/css?family=Snippet' rel='stylesheet' type='text/css'>
-<div id='content'>
-  <nav>
-    <ul>
-      <li class='child'>
-        <a href='#'>
-          <div class='home' id='nav_img'>
-            <!-- /= image_tag("icon/icon-home.png") -->
-          </div>
-          <a href="http://localhost:3000/">Accueil</a>
-        </a>
-      </li>
-      <li class='child'>
-        <a href='#'>
-          <div class='boxe' id='nav_img'>
-            <!-- /= image_tag("icon/icon-boxe.png") -->
-          </div>
-          <!-- /Fight -->
-          <a href="fight/index">Fight</a>
-        </a>
-      </li>
-      <li class='child'>
-        <a href='#'>
-          <div class='couvert' id='nav_img'>
-            <!-- /= image_tag("icon/icon-couverts.png") -->
-          </div>
-          A manger
-        </a>
-      </li>
-      <li class='child'>
-        <a href='#'>
-          <div class='cocktail' id='nav_img'>
-            <!-- /= image_tag("icon/icon-cocktail.png") -->
-          </div>
-          <a href="boire/index">A boire</a>
-        </a>
-      </li>
-      <li class='lastchild'>
-        <a href='#'>
-          <div class='pouce' id='nav_img'>
-            <!-- /= image_tag("icon/icon-pouce.png") -->
-          </div>
-          Soumettre
-        </a>
-      </li>
-    </ul>
-  </nav>
   <div id='main-content'>
     <div id='firstline'>
-      <div class='block-boisson' id='firstline-blockone'>
+      <div class='block-boisson' id='first_boisson'>
         <div id='image-boisson'>
-          <img alt="Mojito" src="/assets/boire/mojito.png" />
+          <img alt="Mojito" src="/assets/boisson/<%= @boisson[0].path %>" />
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
-            <img alt="Icon-mojito" src="/assets/boire/icon-mojito.png" />
+            <img alt="Icon-mojito" src="/assets/boisson/icon-mojito.png" />
           </div>
           <div id='text-bottom'>
             <%= link_to 'Mojito',boisson_path(1) %>
@@ -62,7 +15,7 @@
       </div>
       <div class='block-boisson' id='firstline-blocktwo'>
         <div id='image-boisson'>
-          <img alt="Mojito-concombre" src="/assets/boire/mojito-concombre.png" />
+          <img alt="Mojito-concombre" src="/assets/boisson/<%= @boisson[1].path %>" />
           <!-- /= image_tag("boire/hover-cocktails.png") -->
         </div>
         <div id='bottom-block'>
@@ -70,138 +23,138 @@
             <img alt="Icon-mojito" src="/assets/boire/icon-mojito.png" />
           </div>
           <div id='text-bottom'>
-            Mojito au concombre
+            <%= link_to 'Long Island',boisson_path(2) %>
+
           </div>
         </div>
       </div>
       <div class='block-boisson' id='firstline-blockthree'>
         <div id='image-boisson'>
-          <img alt="Pina" src="/assets/boire/pina.png" />
+          <img alt="Pina" src="/assets/boisson/<%= @boisson[2].path %>" />
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
             <img alt="Icon-mojito" src="/assets/boire/icon-mojito.png" />
           </div>
           <div id='text-bottom'>
-            Piña colada
+            <%= link_to 'Piña colada',boisson_path(3) %>
+
+            
           </div>
         </div>
       </div>
       <div class='block-boisson' id='firstline-finalblock'>
         <div id='image-boisson'>
-          <img alt="Margarita" src="/assets/boire/margarita.png" />
+          <img alt="Margarita" src="/assets/boisson/<%= @boisson[3].path %>" />
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
             <img alt="Icon-margarita" src="/assets/boire/icon-margarita.png" />
           </div>
           <div id='text-bottom'>
-            Margarita framboise
+            <%= link_to 'Chocolat Chaud',boisson_path(4) %>
           </div>
         </div>
       </div>
     </div>
-    <div id='secondline'>
-      <div id='secondline-bigblock'>
-        <div id='image-boisson'>
-          <img alt="Sunset" src="/assets/boire/sunset.png" />
-          <div id='bottom-block'>
-            <div id='icon-bottom'>
-              <img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
-            </div>
-            <div id='text-bottom'>
-              La sangria sunset
-            </div>
-          </div>
+
+    <div id='big_two_small'>
+  <a href="<%= boisson_path(6) %>">
+    <div id='block' class='big'>
+      <div id='image-boisson' class='big_im'>
+        <img alt="Sunset" src="/assets/boire/sunset.png" />
+      </div>  
+      <div id='bottom-block' class="big_bottom">
+        <div id='icon-bottom' class="topicon">
+          <img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
+        </div>
+        <div id='text-bottom'>
+          La sangria sunset
         </div>
       </div>
-      <div id='secondline-fourblock'>
-        <div id='image-boisson'>
-          <img alt="Sunset" src="/assets/boire/sunset.png" />
-          <div id='bottom-block'>
-            <div id='icon-bottom'>
-              <img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
-            </div>
-            <div id='text-bottom'>
-              La sangria sunset
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /#secondline-firstline-one -->
-      <!-- /	#icon-bottom -->
-      <!-- /		= image_tag("boire/icon-mojito.png") -->
-      <!-- /	#text-bottom -->
-      <!-- /		Mojito -->
-      <!-- /#secondline-firstline-two -->
-      <!-- /	#icon-bottom -->
-      <!-- /		= image_tag("boire/icon-mojito.png") -->
-      <!-- /	#text-bottom -->
-      <!-- /		Piña colada -->
-      <!-- /#secondline-secondline-one -->
-      <!-- /	#icon-bottom -->
-      <!-- /		= image_tag("boire/icon-mojito.png") -->
-      <!-- /	#text-bottom -->
-      <!-- /		Mojito -->
-      <!-- /#secondline-secondline-two -->
-      <!-- /	#icon-bottom -->
-      <!-- /		= image_tag("boire/icon-margarita.png") -->
-      <!-- /	#text-bottom -->
-      <!-- /		Piña colada -->
     </div>
-    <div id='firstline'>
-      <div class='block-boisson' id='firstline-blockone'>
+  </a>
+  
+  <a href="<%= plat_path(2) %>">
+    <div id='block' class='small'>
+      <div id='image-boisson' class="small_im">
+        <img alt="Sunset" src="/assets/boisson/cupc.png" />
+      </div>  
+      <div id='bottom-block' class="small_bottom">
+        Les Cupcakes
+      </div>
+    </div>
+  </a>
+
+  <a href="<%= plat_path(12) %>">
+    <div id='block' class='small'>
+      <div id='image-boisson' class='small_im'>
+        <img alt="Sunset" src="/assets/boisson/<%= @boisson[12].path %>" />
+      </div> 
+      <div id='bottom-block' class="small_bottom">
+        <%= link_to 'Daiquiri',boisson_path(13) %>
+      </div> 
+    </div>
+  </a>
+
+</div>
+ <div id='firstline'>
+      <div class='block-boisson' id='first_boisson'>
         <div id='image-boisson'>
-          <img alt="Mojito" src="/assets/boire/mojito.png" />
+          <img alt="Mojito" src="/assets/boisson/<%= @boisson[3].path %>" />
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
-            <img alt="Icon-mojito" src="/assets/boire/icon-mojito.png" />
+            <img alt="Icon-mojito" src="/assets/boisson/icon-mojito.png" />
           </div>
           <div id='text-bottom'>
-            Mojito
+            <%= link_to 'Chocolat Chaud',boisson_path(4) %>
           </div>
         </div>
       </div>
       <div class='block-boisson' id='firstline-blocktwo'>
         <div id='image-boisson'>
-          <img alt="Mojito-concombre" src="/assets/boire/mojito-concombre.png" />
+          <img alt="Mojito-concombre" src="/assets/boisson/<%= @boisson[6].path %>" />
+          <!-- /= image_tag("boire/hover-cocktails.png") -->
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
             <img alt="Icon-mojito" src="/assets/boire/icon-mojito.png" />
           </div>
           <div id='text-bottom'>
-            Mojito au concombre
+            <%= link_to 'Limonade',boisson_path(7) %>
+
           </div>
         </div>
       </div>
       <div class='block-boisson' id='firstline-blockthree'>
         <div id='image-boisson'>
-          <img alt="Pina" src="/assets/boire/pina.png" />
+          <img alt="Pina" src="/assets/boisson/<%= @boisson[7].path %>" />
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
             <img alt="Icon-mojito" src="/assets/boire/icon-mojito.png" />
           </div>
           <div id='text-bottom'>
-            Piña colada
+            <%= link_to 'Biere',boisson_path(8) %>
+
+            
           </div>
         </div>
       </div>
       <div class='block-boisson' id='firstline-finalblock'>
         <div id='image-boisson'>
-          <img alt="Margarita" src="/assets/boire/margarita.png" />
+          <img alt="Margarita" src="/assets/boisson/<%= @boisson[10].path %>" />
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
             <img alt="Icon-margarita" src="/assets/boire/icon-margarita.png" />
           </div>
           <div id='text-bottom'>
-            Margarita framboise
+            <%= link_to 'Cosmopolitan',boisson_path(11) %>
           </div>
         </div>
       </div>
     </div>
+
   </div>
-</div>

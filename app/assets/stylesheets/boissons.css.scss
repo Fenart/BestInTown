@@ -2,36 +2,103 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#secondline
+#big_two_small
 	{
 		height : 427px;
 		margin-top : 23px;
 		width : 100%;
 #topone
-	{height : 427px;
+{
+	height : 427px;
 	width : 381px;
 	float : left;
 	border-radius : 6px;
-
 	background-color : white;
-		#image-boisson
-		{
+	margin-bottom : 30px;
+	
+	#image-boisson
+	{
+		height :293px;
 
 		img
-			{
-			width : 381px;
+		{
+			height : 100%;
+			width : 100%;
 			border-top-left-radius: 6px;
 			border-top-right-radius: 6px;
-			}
 		}
 		#icon-bottom
 		{
-			img
-			{
-				width : 36px;
-			}
+			color : white;
+			background-color : grey;
+			margin : auto;
+			height : 40px;
+			width : 40px;
+			font-size : 30px;
+			font-weight : bold;
+			margin-top : -100px;
+			text-align : center;
+
 		}
 	}
+
+	#bottom-block
+	{
+		height-min : 134px;
+
+		#title-etab
+		{
+			font-size : 26px;
+			padding : 20px;
+			padding-bottom : 5px;
+
+		}
+		#location
+		{
+			font-size : 15px;
+			padding-left : 20px;
+			vertical-align : middle;
+			margin-bottom : 15px;
+
+			img
+			{
+
+
+			}
+			span
+			{
+				display : inline-block;
+				vertical-align : top;
+				padding-top : 4px;
+				padding-left : 10px;
+			}
+		}
+		#vote
+		{
+			background-color : #DEDEDE;
+			bottom: 0;
+			height : 40px;
+			//padding-top : 12px;
+			p
+			{
+				float : right;
+				margin-top : 7px;
+				margin-right : 40px;
+				span
+				{
+
+
+					color : green;
+
+				}
+
+			}
+			
+
+		}
+
+	}
+}
 	#toptwo
 	{
 	height : 200px;

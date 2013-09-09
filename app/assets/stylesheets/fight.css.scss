@@ -1,0 +1,175 @@
+// Place all the styles related to the fight controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#button
+{
+	
+	background-image :url('button.png');
+	background-repeat : no-repeat;
+	height : 50px;
+	margin : auto;
+	width : 230px;
+	margin-top : 100px;
+}
+
+#button_s
+{
+	
+	background-image :url('button.png');
+	background-repeat : no-repeat;
+	height : 50px;
+	margin : auto;
+	width : 230px;
+	margin-top : 10px;
+	margin-bottom : 30px;
+}
+
+.start_fight a
+{
+	color:white;
+	text-align : center;
+	margin:auto;
+	margin-left : 60px;
+	margin-top: 15px;
+	display:  inline-block
+}
+
+.start_passer a
+{
+	color:white;
+	text-align : center;
+	margin:auto;
+	margin-left : 88px;
+	margin-top: 18px;
+	display:  inline-block
+}
+
+#first-vs
+	{
+
+	height : 427px;
+	width : 381px;
+	float : left;
+	border-radius : 6px;
+	background-color : white;
+	margin-bottom : 30px;
+	
+	#image-boisson
+	{
+		height :293px;
+
+		img
+		{
+			height : 100%;
+			width : 100%;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+		}
+
+		#icon-bottom
+		{
+			display:none;
+			color : white;
+			margin : auto;
+			height : 40px;
+			width : 40px;
+			font-size : 30px;
+			font-weight : bold;
+			margin-top : -170px;
+			text-align : center;
+			z-index:+1;
+
+		}
+	}
+	#image-boisson:hover
+	{
+		img
+		{
+			opacity:0.5;
+
+
+		}
+		
+		#icon-bottom
+			{
+				display : block;
+			}
+		
+	}
+
+	#bottom-block
+	{
+		height-min : 134px;
+
+		#title-etab
+		{
+			font-size : 26px;
+			padding : 20px;
+			padding-bottom : 5px;
+
+		}
+		#location
+		{
+			font-size : 15px;
+			padding-left : 20px;
+			vertical-align : middle;
+			margin-bottom : 15px;
+
+			img
+			{
+
+
+			}
+			span
+			{
+				display : inline-block;
+				vertical-align : top;
+				padding-top : 4px;
+				padding-left : 10px;
+			}
+		}
+		#vote
+		{
+			background-color : #DEDEDE;
+			bottom: 0;
+			height : 40px;
+			//padding-top : 12px;
+			p
+			{
+				float : left;
+				margin-top : 10px;
+				margin-left : 40px;
+				span
+				{
+
+
+					color : green;
+
+				}
+
+			}
+			
+
+		}
+
+	}
+
+
+	}
+	.last_child
+	{
+		margin-left : 20px;
+	}
+
+#second-vs
+	{
+		margin-top : 25px;
+		height : 428px;
+		width : 381px;
+		float : right;
+		border-radius : 6px;
+		background-color : white;
+
+	}

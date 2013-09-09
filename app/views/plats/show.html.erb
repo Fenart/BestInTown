@@ -1,2 +1,63 @@
-<h1> Où manger les meilleurs <%= @plat.name %></h1>
-<p><%= @plat.description %></p>
+<%= stylesheet_link_tag    "plats", media: "all", "data-turbolinks-track" => true %>
+
+<link href='http://fonts.googleapis.com/css?family=Snippet' rel='stylesheet' type='text/css'>
+
+<div id='main-content'>
+	<h1>Où manger des <%= @plat.name %>s ?</h1>
+    <div id='secondline'>
+		<% @top_one_plat.each.with_index do |z,index| %>
+			<% if index == 0 %>
+				<div id='topone'>
+        			<div id='image-boisson'>
+          				<img alt="Sunset" src="/assets/boire/sunset.png" />
+          				<div id='bottom-block'>
+            				<div id='icon-bottom'>
+              					<img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
+            				</div>
+            				<div id='text-bottom'>
+           						<%= z.name %>
+           						<%= z.adresse %>
+           						<%= z.point %>
+            				</div>
+            			</div>
+          			</div>
+          		</div>
+          	<% else %>
+        		<div id='image-boisson'>
+          			<img alt="<%= z.path %>" src="/assets/bar/<%= z.path %>" />
+       				<div id='bottom-block'>
+    	       			<div id='icon-bottom'>
+            		 		<img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
+        	   			</div>
+           				<div id='text-bottom'>
+            	 			<%= z.name %>
+            	 			<%= z.adresse %>
+            	 			<%= z.point %>
+           				</div>
+          			</div>
+        		</div>
+          	<% end %>
+
+				
+			
+		<% end %>
+      <!--
+      <div id='toptwo'>
+
+       <div id='toptwo'>
+        <div id='image-boisson'>
+          <img alt="Sunset" src="/assets/boire/sunset.png" />
+          <div id='bottom-block'>
+            <div id='icon-bottom'>
+              <img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
+            </div>
+            <div id='text-bottom'>
+              La sangria sunset
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    
+  </div>
+</div>

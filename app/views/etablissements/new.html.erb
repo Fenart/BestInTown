@@ -1,0 +1,59 @@
+<h1>Nouvel établissement</h1>
+<%= form_for(@etablissement) do |f| %>
+  <% if @etablissement.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@etablissement.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+    <ul>
+    <% @etablissement.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :adresse %><br>
+    <%= f.text_area :adresse %>
+  </p>
+  <p>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<%= form_for(@classement) do |f| %>
+  <% if @classement.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@classement.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+    <ul>
+    <% @classement.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <% @boisson.each do |b| %> 
+    <p>
+      <%= f.label b.name %><br>
+      <%= f.check_box :boisson %>
+    </p>
+   <% end %>
+  <p>
+    <%= f.label :plat %><br>
+    <%= f.text_area :plat %>
+  </p>
+  <p>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Back', etablissements_path %>
