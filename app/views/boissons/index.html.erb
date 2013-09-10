@@ -6,7 +6,7 @@
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
-            <img alt="Icon-mojito" src="/assets/boisson/icon-mojito.png" />
+            <img alt="Icon-mojito" src="/assets/boire/icon-mojito.png" />
           </div>
           <div id='text-bottom'>
             <%= link_to 'Mojito',boisson_path(1) %>
@@ -62,31 +62,31 @@
   <a href="<%= boisson_path(6) %>">
     <div id='block' class='big'>
       <div id='image-boisson' class='big_im'>
-        <img alt="Sunset" src="/assets/boire/sunset.png" />
+        <img alt="Sunset" src="/assets/boisson/<%= @boisson[5].path %>" />
       </div>  
       <div id='bottom-block' class="big_bottom">
         <div id='icon-bottom' class="topicon">
           <img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
         </div>
         <div id='text-bottom'>
-          La sangria sunset
+           <%= link_to 'Sangria Sunset',boisson_path(6) %>
         </div>
       </div>
     </div>
   </a>
   
-  <a href="<%= plat_path(2) %>">
+  <a href="<%= boisson_path(12) %>">
     <div id='block' class='small'>
       <div id='image-boisson' class="small_im">
-        <img alt="Sunset" src="/assets/boisson/cupc.png" />
+        <img alt="Sunset" src="/assets/boisson/<%= @boisson[11].path %>" />
       </div>  
       <div id='bottom-block' class="small_bottom">
-        Les Cupcakes
+         <%= link_to 'Bloody Mary',boisson_path(12) %>
       </div>
     </div>
   </a>
 
-  <a href="<%= plat_path(12) %>">
+  <a href="<%= boisson_path(13) %>">
     <div id='block' class='small'>
       <div id='image-boisson' class='small_im'>
         <img alt="Sunset" src="/assets/boisson/<%= @boisson[12].path %>" />
@@ -101,14 +101,14 @@
  <div id='firstline'>
       <div class='block-boisson' id='first_boisson'>
         <div id='image-boisson'>
-          <img alt="Mojito" src="/assets/boisson/<%= @boisson[3].path %>" />
+          <img alt="Mojito" src="/assets/boisson/<%= @boisson[4].path %>" />
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
-            <img alt="Icon-mojito" src="/assets/boisson/icon-mojito.png" />
+            <img alt="Icon-mojito" src="/assets/boire/icon-margarita.png" />
           </div>
           <div id='text-bottom'>
-            <%= link_to 'Chocolat Chaud',boisson_path(4) %>
+            <%= link_to 'Margarita',boisson_path(5) %>
           </div>
         </div>
       </div>

@@ -1,3 +1,8 @@
+   <% content_for :boisson do %>
+     <%= stylesheet_link_tag  "plats", media: "all", "data-turbolinks-track" => true %>
+
+  <% end %>
+
   <div id='main-content'>
     <div id='firstline'>
       <div class='block-boisson' id='first_boisson'>
@@ -6,7 +11,7 @@
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
-            <img alt="Icon-mojito" src="/assets/boire/icon-mojito.png" />
+            <img alt="Icon-mojito" src="/assets/boire/sale.png" />
           </div>
           <div id='text-bottom'>
             <%= link_to @plat[0].name,plat_path(1) %>
@@ -20,7 +25,7 @@
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
-            <img alt="Icon-mojito" src="/assets/boire/icon-mojito.png" />
+            <img alt="Icon-mojito" src="/assets/boire/sucre.png" />
           </div>
           <div id='text-bottom'>
             <%= link_to @plat[4].name,plat_path(5) %>
@@ -33,7 +38,7 @@
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
-            <img alt="Icon-mojito" src="/assets/boire/icon-mojito.png" />
+            <img alt="Icon-mojito" src="/assets/boire/sucre.png" />
           </div>
           <div id='text-bottom'>
             <%= link_to @plat[2].name,plat_path(3) %>
@@ -46,7 +51,7 @@
         </div>
         <div id='bottom-block'>
           <div id='icon-bottom'>
-            <img alt="Icon-margarita" src="/assets/boire/icon-margarita.png" />
+            <img alt="Icon-margarita" src="/assets/boire/sale.png" />
           </div>
           <div id='text-bottom'>
             <%= link_to @plat[3].name,plat_path(4) %>

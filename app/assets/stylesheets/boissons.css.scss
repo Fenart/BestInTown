@@ -1,6 +1,8 @@
 // Place all the styles related to the boissons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$color-bleu-gris : #3C4F5F;
+
 
 #big_two_small
 	{
@@ -29,17 +31,23 @@
 		}
 		#icon-bottom
 		{
+			position : absolute;
 			color : white;
-			background-color : grey;
+			background-color : #eb5440;
 			margin : auto;
-			height : 40px;
-			width : 40px;
-			font-size : 30px;
-			font-weight : bold;
-			margin-top : -100px;
+			margin-left : 155px;
+			height : 60px;
+			width : 60px;
+			font-size : 47px;
+			margin-top : +110px;
 			text-align : center;
+			padding : 10px;
+			border-radius : 4px;
+			font-family : 'Sunshiney', cursive;
 
 		}
+
+
 	}
 
 	#bottom-block
@@ -75,23 +83,31 @@
 		}
 		#vote
 		{
-			background-color : #DEDEDE;
+			background-color : #F8F8F8;
 			bottom: 0;
 			height : 40px;
 			//padding-top : 12px;
 			p
 			{
 				float : right;
-				margin-top : 7px;
+				margin-top : 11px;
 				margin-right : 40px;
 				span
 				{
 
 
-					color : green;
+					color : #6AAF52;
 
 				}
 
+			}
+			#icon-bottom{
+
+				height: 30px;
+				width: 30px;
+				position: absolute;
+				background-color: red;
+				margin-top: -40px;
 			}
 			
 
@@ -102,9 +118,75 @@
 	#toptwo
 	{
 	height : 200px;
-	width : 381px;
+	width : 379px;
 	float : right;
+	background-color : white;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	margin-bottom: 30px;
+			#icon-bottom
+		{
+			position : absolute;
+			color : white;
+			background-color : $color-bleu-gris;
+			margin : auto;
+			margin-left : 155px;
+			height : 50px;
+			width : 50px;
+			font-size : 40px;
+			margin-top : +50px;
+			text-align : center;
+			z-index : +1;
+			padding : 5px;
+			border-radius : 4px;
+			font-family : 'Sunshiney', cursive;
+			
+		
 
+			}
+					#icon-bottom.greentop
+			{
+				background-color : #00B397;
+			}
+		#image-boisson
+		{
+			height : 170px;
+			img
+			{
+				clip: rect(0px, 384px, 170px, 0px);
+				position: absolute;
+			}
+		}
+		#bottom-block
+		{
+			img
+			{
+			margin-top: 3px;
+margin-left: 17px;
+			}
+			#text-bottom
+			{
+				width : 80%;
+				display:inline-block;
+				vertical-align: top;
+margin-top: 6px;
+font-weight: bolder;
+				span
+				{
+					float : right;
+
+				}
+									.green
+					{
+						color :#6AAF52;
+						margin-right : 2px;
+					}
+			}
+		}
 	}
+	
+
+	
 	}
+
 

@@ -7,12 +7,12 @@
 			<% if index == 0 %>
 				<div id='topone'>
         	<div id='image-boisson'>
-            
-        		<img alt="Sunset" src="/assets/boire/sunset.png" />
-            <div id='icon-bottom'>
+              <div id='icon-bottom'>
               <!--<img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />-->
-              # 1
+              #1
             </div>
+        		<img alt="Sunset" src="/assets/bar/<%= z.path %>" />
+
           </div>
         	<div id='bottom-block'>
          		<div id="title-etab">
@@ -31,19 +31,31 @@
           </div>
         </div>
       <% else %>
+      <div id="toptwo">
+
         <div id='image-boisson'>
+            <% @css = "" %>
+            <% if index == 2 %>
+             <% @css = "greentop" %>
+            <% end %> 
+              <div id='icon-bottom' class="<%= @css %>">
+              <!--<img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />-->
+              #<%= index + 1 %>
+            </div>
+            
     			<img alt="<%= z.path %>" src="/assets/bar/<%= z.path %>" />
+        </div>
      			<div id='bottom-block'>
-       			<div id='icon-bottom'>
-          		<img alt="Icon-etoile" src="/assets/boire/icon-etoile.png" />
-          	</div>
+            <img alt="locatationpoint" src="/assets/pointer.png" >
            	<div id='text-bottom'>
-             	<%= z.name %>
-            	<%= z.adresse %>
-      	 			<%= z.point %>
+             	                 
+              <%= z.name %>
+            
+      	 			<span> votes </span><span class="green"> <%= z.point %></span>
      				</div>
     			</div>
       	</div>
+    
           	<% end %>
 
 				
